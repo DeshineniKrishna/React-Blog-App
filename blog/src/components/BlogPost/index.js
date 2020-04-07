@@ -5,7 +5,9 @@ import blogPosts from '../../data/blog.json'
 
 function BlogPost(props) { 
 
-    const[post,setpost] = useState({});
+    const[post,setpost] = useState({
+        blogImage:"",
+    });
     const[postID,setpostID] = useState('');
 
     useEffect(() => {
@@ -14,6 +16,9 @@ function BlogPost(props) {
        setpost(post);
        setpostID(postID);
     },[post,props.match.params.postid]);
+
+    
+    if(post.blogImage === "") return null;
 
     return (
         <div className="blogpostContainer">
@@ -24,7 +29,7 @@ function BlogPost(props) {
                     <span className="postedBy">posted on {post.postedOn} by {post.author}</span>
                 </div>
                 <div className="imageContainer">
-                    <img src={require(`../../images/`+ "blogpost.jpg" )} alt="PostImage"/>
+                    <img src={require(`../../images/`+ post.blogImage )} alt="PostImage"/>
                 </div>
                 <div className="postContent">
                     <h3>{post.blogTitle}</h3>

@@ -6,9 +6,9 @@ export class Header extends Component {
         return (
             <header className="header">
                 <nav className="headerNav">
-                    <a href="#">Home</a>
+                    {/* <a href="#">Home</a>
                     <a href="#">About Us</a>
-                    <a href="#">Contact Us</a>
+                    <a href="#">Contact Us</a> */}
                 </nav>
                 <div>
                     SocialMedia Links

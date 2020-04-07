@@ -31,6 +31,13 @@ function SideBar(props) {
                 <div className="cardHeader">
                     <span>Social Network</span>
                 </div>
+                <div className="socialmedia">
+                    <a href="#" className="fa fa-facebook"></a>
+                    <a href="#" className="fa fa-twitter"></a>
+                    <a href="#" className="fa fa-google"></a>
+                    <a href="#" className="fa fa-linkedin"></a>
+                    <a href="#" className="fa fa-instagram"></a>
+                </div>
             </Card>
 
             <Card style={{marginBottom :"20px", padding :"20px", boxSizing: "border-box"}}>
@@ -39,7 +46,7 @@ function SideBar(props) {
                 </div>
                 <div className="recentPosts">
                     {
-                        posts.map(post =>{
+                        posts.slice(0,4).map(post =>{
                             return (
                                 <NavLink key={post.id} to={`/post/${post.id}`}>
                                     <div className="recentPost">

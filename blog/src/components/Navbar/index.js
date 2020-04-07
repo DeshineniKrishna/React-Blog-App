@@ -4,7 +4,6 @@ import searchicon from '../../images/searchicon.png'
 import {Link} from 'react-router-dom'
 
 export class Navbar extends Component {
-
     constructor(props) {
         super(props)
     
@@ -35,7 +34,7 @@ export class Navbar extends Component {
                 <ul className="navbarmenu">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/aboutme">AboutMe</Link></li>
-                    <li><Link to="/post/:postid">Posts</Link></li>
+                    <li><Link to="/post/1">Posts</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
                 <div className="search">
